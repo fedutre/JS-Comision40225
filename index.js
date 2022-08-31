@@ -8,12 +8,21 @@ alert("Bienvenido al gestor de horas de Multideportes, Espacio deportivo")
 nombreUsuario = prompt("Ingrese su nombre y Apellido")
     alert("Bienvenido" + " " + nombreUsuario)
 
-edadUsuario = parseInt(prompt("Ingrese su edad"))
-if(edadUsuario >=18){
-    alert("Eres mayor de edad, a continuación podras elegir el deporte")
-} else{
-    alert("No puedes sacar turno por que eres menor de edad")
-}
+edadUsuario = prompt("Elige: 1: Soy mayor de edad - 2: Soy menor de edad")
+    while(edadUsuario !="1" && edadUsuario != "2")
+    
+        switch(edadUsuario){
+            case"1":
+                alert("Eres mayor de edad")
+                break
+        }
+    
+        switch(edadUsuario){
+
+            default:
+            alert("No tienes permitido realizar reservas")
+            break
+        }
 
 deporteElegido = prompt("¿Tu deporte es Futbol, Tenis o Padel?")    
     if(deporteElegido === "Futbol")
@@ -55,7 +64,6 @@ horarioElegido = prompt("Horarios disponibles. 19hs , 20hs, 21hs, 22 hs, 23hs")
 
             default:    
             alert("No elegiste un horario disponible")
-
             break
 
         }
