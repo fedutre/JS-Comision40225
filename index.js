@@ -8,6 +8,15 @@ alert("Bienvenido al gestor de horas de Multideportes, Espacio deportivo")
 nombreUsuario = prompt("Ingrese su nombre y Apellido")
     alert("Bienvenido" + " " + nombreUsuario)
 
+/*edadUsuario = parseInt(prompt("Ingrese su edad"));{
+    if(edadUsuario >=18){
+        alert("Eres mayor de edad, a continuación podras elegir el deporte")
+    }else{
+    edadUsuario =  alert("No puedes sacar turno por que eres menor de edad")
+    }
+    
+}*/
+
 edadUsuario = prompt("Elige: 1: Soy mayor de edad - 2: Soy menor de edad")
     while(edadUsuario !="1" && edadUsuario != "2")
     
