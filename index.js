@@ -4,6 +4,8 @@ let deporteElegido
 let horarioElegido
 let desicion
 let resultado = 0;
+const opcionBebida = ["isotonica" , "Cerveza" , "Agua" , "Agua saborizada"] 
+
 alert("Bienvenido al gestor de horas de Multideportes, Espacio deportivo")
 nombreUsuario = prompt("Ingrese su nombre y Apellido")
 alert("Bienvenido" + " " + nombreUsuario)
@@ -67,6 +69,26 @@ if(edadUsuario >=18){
         return resultado + luz
     }
     alert("Su valor con luz es $" + calcularLuz(resultado))
+
+    alert("A continuación indicá si deseas bebidas")
+const opcionBebida = prompt("Elija Si, No o No se")
+if(opcionBebida === "Si"){
+    alert("Elegiste Si")
+
+let bebida = prompt("Bebida Isotonica, Cerveza, Agua, Agua saborizada, Gaseosa ")
+    alert("Elegiste" + " " + bebida)
+
+}else if(opcionBebida === "No"){
+    alert("Elegiste No")
+}else if(opcionBebida === "No se"){
+    alert("Vas a elegir la bebida en tu turno")
+}else{
+    opcionBebida = prompt ("Tienes que colocar una opción valida")
+    
+}
+
 }else{
     alert("No puedes sacar turno por que eres menor de edad")
 }
+const masBebidas = opcionBebida.push("Gaseosa")
+console.log(masBebidas)
