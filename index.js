@@ -41,7 +41,7 @@ boton.innerText = 'Seguir comprando'
 document.body.append(boton)
 
 const boton2 = document.createElement('button')
-boton.innerText = 'Terminar compra'
+boton2.innerText = 'Terminar compra'
 document.body.append(boton2)
 
 boton.onclick = () => {
