@@ -33,3 +33,29 @@ productos.forEach(productos=>{
     selecTag.append(option)
 
 })
+
+let carrito = []
+
+const boton = document.createElement('button')
+boton.innerText = 'Seguir comprando'
+document.body.append(boton)
+
+const boton2 = document.createElement('button')
+boton.innerText = 'Terminar compra'
+document.body.append(boton2)
+
+boton.onclick = () => {
+    const productoSeleccionado = productos[selecTag.selectedIndex]
+    carrito.push(productoSeleccionado)
+}
+
+boton2.onclick = ()=>{
+let totalCompra = 0
+carrito.forEach((prod)=>{
+    totalCompra = totalCompra + prod.precio
+})
+}
+
+const p = document.createElement('p')
+p.innerText = `El precio total a pagar es ${totalCompra}`
+document.body.append(p)
