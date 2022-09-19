@@ -1,4 +1,5 @@
 let productos = []
+
 const selecTag = document.getElementById('lista')
 
 const cocaCola = {
@@ -47,6 +48,10 @@ document.body.append(boton2)
 boton.onclick = () => {
     const productoSeleccionado = productos[selecTag.selectedIndex]
     carrito.push(productoSeleccionado)
+
+    const p = document.createElement('p')
+    p.innerText = `Ud a seleccionado ${productoSeleccionado}`
+    document.body.append(p)
 }
 
 boton2.onclick = ()=>{
@@ -54,8 +59,8 @@ let totalCompra = 0
 carrito.forEach((prod)=>{
     totalCompra = totalCompra + prod.precio
 })
-}
 
 const p = document.createElement('p')
 p.innerText = `El precio total a pagar es ${totalCompra}`
 document.body.append(p)
+}
