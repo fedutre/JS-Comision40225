@@ -68,7 +68,7 @@ document.body.append(p)
 const seleccionFinal = productos.find(producto =>{
     producto === productoSeleccionado
     
-    const p = document.createElement('p')
-    p.innerText = `Su seleccion final es ${productoSeleccionado}`
-    document.body.append(p)
+const p = document.createElement('p')
+p.innerText = `Su seleccion final es ${productoSeleccionado}`
+document.body.append(p)
 })
