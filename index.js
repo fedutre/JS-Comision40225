@@ -46,7 +46,7 @@ boton2.innerText = 'Terminar compra'
 document.body.append(boton2)
 
 boton.onclick = () => {
-    const productoSeleccionado = productos[selecTag.selectedIndex]
+    let productoSeleccionado = productos[selecTag.selectedIndex]
     carrito.push(productoSeleccionado)
 
     const p = document.createElement('p')
@@ -65,8 +65,10 @@ p.innerText = `El precio total a pagar es ${totalCompra}`
 document.body.append(p)
 }
 
-let seleccionFinal = 0
-carrito.forEach((seleccionFinal)=> {
-    seleccionFinal = productoSeleccionado + prod.nombre
-    p.innerText = `ud a seleccionado ${seleccionFinal}`
+const seleccionFinal = productos.find(producto =>{
+    producto === productoSeleccionado
+    
+    const p = document.createElement('p')
+    p.innerText = `Su seleccion final es ${productoSeleccionado}`
+    document.body.append(p)
 })
